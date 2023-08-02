@@ -1,0 +1,1 @@
+let a=(l,o)=>l*o;console.log(a(10,20));

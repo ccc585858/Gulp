@@ -1,0 +1,24 @@
+$fontsize: 20px; // variable
+$fontfamily: Arial, Helvetica, sans-serif; // string
+$title: (
+  key: value,
+  h1: 50px,
+  h2: 30px,
+); // map
+
+$fontWeight: true; // boolean
+
+$h1: 46px;
+$h2: 38px;
+$h3: 30px;
+$h4: 22px;
+$h5: 14px;
+
+$title_size: (
+  h1: 50px,
+  h2: 40px,
+  h3: 30px,
+  span: 16px,
+  div: 20px,
+  ".box": 36px,
+);

@@ -1,0 +1,70 @@
+// .btn {
+//   //   padding: 10px 30px;
+//   //   text-align: center;
+//   //   color: $black;
+//   //   cursor: pointer;
+//   &.primary {
+//     background-color: $primary;
+//     transition: all 0.3s ease;
+//     &:hover {
+//       background-color: darken($primary, 20);
+//       color: $white;
+//     }
+//   }
+
+//   &.second {
+//     background-color: $second;
+//   }
+
+//   &.warring {
+//     background-color: $warring;
+//   }
+
+//   &.error {
+//     background-color: $error;
+//     &:hover {
+//       background-color: darken($error, 30);
+//       color: $white;
+//     }
+//   }
+
+//   &.outline {
+//     border: 1px solid $primary;
+//     background-color: initial;
+//     color: $primary;
+//   }
+//   &.radius {
+//     border-radius: $border-redius-3;
+//   }
+// }
+
+@mixin btn($class, $bgc, $outline, $bdr: null) {
+  .btn {
+    padding: 10px 30px;
+    text-align: center;
+    color: $black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &.#{$class} {
+      border-radius: $bdr;
+      background-color: $bgc;
+      &:hover {
+        background-color: darken($bgc, 20);
+        color: $white;
+      }
+    }
+
+    @if $outline {
+      &.outline {
+        border-width: 1px;
+        border-style: solid;
+        background-color: initial;
+      }
+    }
+  }
+}
+
+@include btn(primary, $primary, false, 5px);
+@include btn(second, $second, true, 10px);
+@include btn(error, $error, false, 15px);
+@include btn(warring, $warring, false, 20px);

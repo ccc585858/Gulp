@@ -1,0 +1,20 @@
+h1 {
+  font-size: map-get($title, h2);
+}
+
+.container {
+  h1 {
+    font-size: 40px;
+    color: #333;
+
+    // 自己設定 RWD 斷點
+    @include d(890px) {
+      font-size: 60px;
+      color: #2e3fff;
+    }
+    @include m() {
+      font-size: 80px;
+      color: burlywood;
+    }
+  }
+}

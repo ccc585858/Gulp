@@ -1,0 +1,26 @@
+body {
+  font-size: $fontsize;
+  margin: 0;
+  color: rgb(117, 61, 147);
+  background-color: $backgroundColor; // 判斷式
+  @if $fontWeight {
+    font-weight: 900px; // null 通常是把屬性刪除
+  } @else {
+    font-weight: null;
+  }
+}
+
+// Nesting
+
+// 判斷視窗大小
+.wrapper {
+  @include layout(80);
+  // @import "header";
+  // @import "footer";
+}
+
+//好煩~~~
+
+.w30 {
+  @include layout(30);
+}

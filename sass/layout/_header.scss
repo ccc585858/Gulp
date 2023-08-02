@@ -1,0 +1,33 @@
+header {
+  @include layout(80);
+  display: flex;
+  justify-content: space-between;
+
+  h1.logo {
+    width: 150px;
+    height: 80px;
+    background-color: #998a34b7;
+  }
+
+  nav {
+    // margin-right: 30px;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        padding: 10px 20px;
+        text-align: center;
+        background-color: burlywood;
+        color: aliceblue;
+        transition: all 1s ease;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        &:hover {
+          background-color: rgb(114, 135, 179);
+        }
+      }
+    }
+  }
+}

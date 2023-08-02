@@ -1,0 +1,11 @@
+// 首頁
+.index {
+  .container {
+    @include layout(100);
+    .banner {
+      background-image: url("https://media.vogue.com.tw/photos/5db91b2b46ca340008dac46e/2:3/w_1920,c_limit/2010111962457253.JPG");
+      width: 100%;
+      height: 480px;
+    }
+  }
+}
